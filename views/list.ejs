@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ga-style.css">
+  </head>
+  <body class ="">
+
+    <div class="box" id="title">
+      <h2 class="">ToDo List</h2>
+    </div>
+
+    <div class="box" id="heading">
+      <h1 class=""> <%= dayOfWeek %> </h1>
+    </div>
+
+    <div class="box">
+
+        <% for( i in listItems){ %>
+          <div class="item">
+            <input type="checkbox">
+            <p> <%= listItems[i] %> </p>
+          </div>
+        <% } %>
+
+      <form class="item" action="/" method="post">
+        <input type="text" name="todoItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="button">+</button>
+      </form>
+    </div>
+
+
+  </body>
+</html>
